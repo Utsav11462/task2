@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.7;
+contract convert{
+    uint value;
+    function setnumber(uint _value) public {
+        value = _value;
+    }
+    function getvalue() public view returns (uint){
+        return value;
+    }
+    function convertTowei()public view returns(uint){
+        return value*(10**18);
+    }
+    function convertToGwei()public view returns(uint){
+        return value*(10**9);
+    }
+}
